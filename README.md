@@ -2,7 +2,7 @@
 
 Tasks done
 1. Data explored in excel
-2. Cleansed data for empty values and sanithy of numeric columns
+2. Cleansed data for empty values and sanity of numeric columns
 3. Modeled the data warehouse using Kimball modeling technique and created dimension and fact tables
 4. Created SSIS package to integrate data from csv files to load database tables 
 
