@@ -1,15 +1,7 @@
-USE [AdventureWorksDW2014]
-GO
 
-/****** Object:  Table [dbo].[DimStation]    Script Date: 23/08/2021 7:40:49 PM ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
 
 CREATE TABLE [dbo].[DimStation](
-	[StationKey] [uniqueidentifier] NULL,
+	[StationKey] [uniqueidentifier] NOT NULL,
 	[StationAltkey] [int] NULL,
 	[TrainStation] [varchar](50) NULL,
 	[StreetName] [varchar](50) NULL,
@@ -17,7 +9,11 @@ CREATE TABLE [dbo].[DimStation](
 	[EntranceType] [varchar](50) NULL,
 	[LAT] [varchar](50) NULL,
 	[LONG] [varchar](50) NULL,
-	[ExitNumber] [varchar](50) NULL
+	[ExitNumber] [varchar](50) NULL,
+	 CONSTRAINT [PK_DimStation] PRIMARY KEY CLUSTERED 
+(
+	[StationKey] ASC
+)
 ) ON [PRIMARY]
 GO
 

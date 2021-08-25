@@ -1,15 +1,6 @@
-USE [AdventureWorksDW2014]
-GO
-
-/****** Object:  Table [dbo].[DimSchool]    Script Date: 21/08/2021 11:53:30 PM ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
 
 CREATE TABLE [dbo].[DimSchool](
-	[SchoolKey] [uniqueidentifier] NULL,
+	[SchoolKey] [uniqueidentifier] NOT NULL,
 	[SchoolAltKey] [int] NULL,
 	[SchoolCode] [varchar](50) NULL,
 	[AgeID] [varchar](50) NULL,
@@ -47,7 +38,11 @@ CREATE TABLE [dbo].[DimSchool](
 	[ASGSRemoteness] [varchar](50) NULL,
 	[Latitude] [varchar](50) NULL,
 	[Longitude] [varchar](50) NULL,
-	[DateExtracted] [varchar](50) NULL
+	[DateExtracted] [varchar](50) NULL,
+	 CONSTRAINT [PK_DimSchool] PRIMARY KEY CLUSTERED 
+(
+	[SchoolKey] ASC
+)
 ) ON [PRIMARY]
 GO
 
